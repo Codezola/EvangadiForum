@@ -1,3 +1,4 @@
+
 const {
   askQuestion,
     getQuestions,
@@ -11,7 +12,7 @@ require("dotenv").config();
     
     askQuestion: (req, res) => {
       const { title, question  } = req.body;
-  
+      
       
       if (!title || !question)
         return res

@@ -40,9 +40,6 @@ function SignIn() {
             <div className="row hero-padd">
               <div className="col-md-6 col-12 col-sm-6">
                 <div className="authfy-login">
-                  <div className="alert alert-danger">
-                    Please log in to your account first.
-                  </div>
                   {isLogIn2 ? (
                     <ForgotPassword
                       showSignIn={showSignIn}

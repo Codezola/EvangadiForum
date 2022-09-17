@@ -8,7 +8,7 @@ const SignUp = ({ showSignIn }) => {
   const navigate = useNavigate();
   const axios = Axios();
 
-  //importing global state from context
+  
   const [userData, setUserData] = useContext(UserContext);
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -16,16 +16,16 @@ const SignUp = ({ showSignIn }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //sending data to be registered in database
+      
       await axios.post("/api/users", form);
 
-      //once registered the login automatically so send the new user info to be logged in
+      
       const loginRes = await axios.post("/api/users/login", {
         email: form.email,
         password: form.password,
       });
 
-      // set the global state with the new user info
+      
       setUserData({
         token: loginRes.data.token,
         user: loginRes.data.user,
@@ -34,10 +34,10 @@ const SignUp = ({ showSignIn }) => {
         },
       });
 
-      //set localStorage with the token
+      
       localStorage.setItem("auth-token", loginRes.data.token);
 
-      //navigate to homepage once the user is signed up
+      
       navigate("/");
     } catch (err) {
       console.log("Error : " + err.response.data.msg);
@@ -137,19 +137,26 @@ const SignUp = ({ showSignIn }) => {
                 <span className="fa fa-eye-slash pwd-toggle"></span>
               </div>
             </div>
-            <div className="form-group">
-              <p className="term-policy text-muted small">
+            <div className="form-group flex flex-row ">
+            <label>
+            <input type="checkbox"
+            required/>
+            </label>
+            <p className="term-policy text-muted small">
                 I agree to the
-                <a href="/legal/privacy/" target="_blank">
+                <a href="https://www.evangadi.com/legal/privacy/" target="_blank">
                   privacy policy
                 </a>
                 and
-                <a href="/legal/terms/" target="_blank">
-                  terms of service
+                <a href="https://www.evangadi.com/legal/terms/" target="_blank">
+                  terms of service.
                 </a>
-                .
+                
               </p>
-            </div>
+          
+          
+          </div>
+              
             <div className="form-group">
               <button
                 className="btn btn-lg btn-primary btn-block"

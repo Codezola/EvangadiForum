@@ -40,6 +40,7 @@ function Login({ showSignUp, showForgot }) {
       alert("Error :" + err.response.data.msg);
     }
   };
+  
 
   return (
     <div className="authfy-panel panel-login text-center active">

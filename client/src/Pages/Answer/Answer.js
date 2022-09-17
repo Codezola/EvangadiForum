@@ -20,7 +20,7 @@ function Answer() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      //sending user data to database to be logged in
+      
       const postRes = await axios.post(
         "/api/answer/newanswer",
         {

@@ -5,7 +5,6 @@ import { UserContext } from "./context/UserContext";
 import Home from "./Pages/Home/Home";
 import Header from "./Pages/Header/Header";
 import Footer from "./Pages/Footer/Footer";
-// import Footer from "./Pages/Footer/FooterMain";
 import Login from "./Pages/Signin/SignIn";
 import NewQuestion from "./Pages/Question/NewQuestion";
 import Answer from "./Pages/Answer/Answer";
@@ -15,19 +14,15 @@ function App() {
   const axios = Axios();
 
   const checkLoggedIn = async () => {
-    //check if token already exists in localStorage
     let token = localStorage.getItem("auth-token");
     if (token === null || token === "") {
-      //token not in localStorage then set auth token empty
       localStorage.setItem("auth-token", "");
       token = "";
     } else {
-      //if token exists in localStorage then use auth to verify token and get user info
       const userRes = await axios.get("/api/users", {
         headers: { "x-auth-token": token },
       });
 
-      //set the global state with user info
       setUserData({
         token,
         user: {
@@ -42,7 +37,6 @@ function App() {
   };
 
   useEffect(() => {
-    //check if the user is logged in
     checkLoggedIn();
   }, []);
   return (

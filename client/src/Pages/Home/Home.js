@@ -51,25 +51,34 @@ const Home = () => {
         </span>
       </button>
         <h1 className="header_border ">
-          Welcome: {userData.user?.display_name}
+          Welcome to Evangadi Forum: {userData.user?.display_name}
         </h1>
       </div>
       <div
-        className="search"
-        style={{
-          borderBottom: "0.1px solid",
-          height: "50px",
-          borderRadius: "5px",
-          paddingTop: "0.1%",
-          paddingRight: "0.1%",
-          paddingBottom: "0.1%",
-          marginBottom: "1%",
-        }}
+        className="flex justify-between"
       >
         <h2>Questions</h2>
         <input
-          className="search_bar"
-          type="text"
+        type="search"
+        className="
+          form-control
+          block
+          w-full
+          px-2
+          py-2
+          text-base
+          font-normal
+          text-orange-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-orange-700 focus:bg-white focus:border-blue-200 focus:outline-none
+        "
+        id="exampleSearch"
+        placeholder="Search Tittle"
           onChange={(e) => {
             setSearcher(e.target.value);
           }}

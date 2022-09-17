@@ -5,12 +5,10 @@
     top: 0;
     left: 0;
     overflow: hidden;
-    /*box-shadow: 0 3px 5px rgba(0,0,0,.05);*/
     background-color: #fff;
-    border-radius: 10px;
-    /*border: 1px solid #ddd;*/
-    box-shadow: 0 4px 12px rgba(158, 158, 158, 0.12);
-    border-radius: 8px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(208, 59, 59, 0.12);
+    border-radius: 15px;
   }
   
   .authfy-login .authfy-panel {
@@ -46,7 +44,7 @@
   }
   
   .authfy-login .social-buttons a:hover {
-    color: white;
+    color: rgb(220, 117, 117);
     opacity: 0.9;
   }
   
@@ -71,10 +69,10 @@
   }
   
   .authfy-login .loginOr .hrOr {
-    background-color: #cdcdcd;
+    background-color: #cbc1c1;
     height: 1px;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    margin-top: 0px; 
+    margin-bottom: 0px; 
   }
   
   .authfy-login .loginOr .spanOr {
@@ -83,7 +81,7 @@
     left: 50%;
     top: -0.75em;
     margin-left: -1.5em;
-    background-color: white;
+    background-color: rgb(234, 151, 151);
     width: 3em;
     text-align: center;
   }
@@ -129,7 +127,6 @@
   .wrap-input {
     width: 100%;
     position: relative;
-    /*border-bottom: 2px solid #d9d9d9;*/
   }
   
   .focus-input {
@@ -143,7 +140,7 @@
   }
   
   .focus-input:before {
-    background-color: #fe8402;
+    background-color: #f8f8f9;
     content: '';
     width: 0;
     height: 2px;
@@ -196,10 +193,6 @@
     text-decoration: underline;
   }
   
-  /*--------------------*/
-  /* 05. Responsive CSS */
-  /*--------------------*/
-  
   @media (min-width: 320px) and (max-width: 375px) {
     .authfy-login .authfy-panel {
       padding: 32px;
@@ -239,9 +232,6 @@
     }
   }
   
-  /*----------------------------------------
-  General Styles
-  ----------------------------------------*/
   
   body {
     font-family: 'Lato', sans-serif;
@@ -613,9 +603,7 @@
     }
   }
   
-  /*----------------------------------------
-    Navigation
-    ----------------------------------------*/
+  
   
   .navbar-header {
     z-index: 999;
@@ -708,7 +696,7 @@
     background-color: #fe8402;
     border-color: #fe8402;
   }
-  /* Hero */
+  
   .image-hero {
     position: absolute;
     right: 0;
@@ -793,9 +781,6 @@
     filter: none;
     opacity: 1;
   }
-  /*----------------------------------------
-  About
-  ----------------------------------------*/
   
   .small-text {
     color: #fe8303;

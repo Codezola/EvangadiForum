@@ -33,7 +33,7 @@ const NewQuestion = () => {
   };
 
   return (
-    <section className="container" style={{ paddingTop: "100px" }}>
+    <section className="container " style={{ paddingTop: "100px" }}>
       <div className="d-flex flex-column align-items-center my-5">
         <h3>Steps to write a good question</h3>
         <ul style={{ fontSize: "large", alignItems: "baseline" }}>

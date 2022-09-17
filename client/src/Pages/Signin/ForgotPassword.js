@@ -70,10 +70,9 @@ function ForgotPassword({ showSignIn, showSignUp }) {
           {reset && (
             <div className="reset-link-sent">
               <div className="authfy-heading">
-                <h3 className="auth-title">
-                  Reset instruction is sent to your email
-                </h3>
-                <h4>Please check your email to reset your password.</h4>
+                <h5 className="auth-title">
+                  Unfortunatlly You Can't Use This Future right now Please Register Again
+                </h5>
               </div>
             </div>
           )}

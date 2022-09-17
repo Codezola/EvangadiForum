@@ -18,7 +18,7 @@ function QuestionDetail({ question }) {
       <div className="question_user" style={{ textAlign: "center" }}>
         <FaRegUserCircle style={{ width: "80%", height: "80%", margin: "auto" }} />
         <div style={{ width: "80%", height: "20%", margin: "auto" }}>
-          {question ? question.user_name + "" : "New User"}{" "}
+        <p>Question From</p> {question ? question.user_name + "" : "New User"}{" "}
         </div>
       </div>
       <div className="question_title" onClick={handleClick}>
